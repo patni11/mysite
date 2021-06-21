@@ -14,7 +14,16 @@ a {
     text-decoration: none;
     cursor: pointer;
 }
-
+.menu-btn {
+    background: $primary;
+    padding: 1.2em;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    right: 0;
+    height: 100vh;
+    top: 0;
+}
 nav {
     background: $primary;
     position: fixed;
@@ -110,6 +119,29 @@ section.articles {
                 color: $secondary-light;
                 margin: 0.5em 0 0;
             }
+            .tag {
+                display: inline-block;
+                width: 3.4em;
+                height: 3.4em;
+                background-color: $primary-light;
+                border-radius: 50%;
+                color: $secondary-light;
+                font-weight: bold;
+                padding: 0.85em;
+                position: absolute;
+                right: -1.8em;
+                top: -1.8em;
+
+                img {
+                    width: 2.4em;
+                    height: 2.4em;
+                    position: relative;
+                    right: 0.35em;
+                    bottom: 0.35em;
+                }
+
+            };
+            /*
             &::before {
                 content: 'Tech';
                 display: inline-block;
@@ -124,6 +156,7 @@ section.articles {
                 right: -1.8em;
                 top: -1.8em
             }
+            */
         }
     }
 }
@@ -140,6 +173,19 @@ section.newsletter {
         color: $primary-light;
         text-align: center;
     }
+    .submit-button {
+        display: inline-block;
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 0.8em 0;
+        background-color: $primary-light;
+        color: $secondary-dark;
+        font-weight: bold;
+        font-size: 1.2em;
+        border-radius: 6em;
+    }
+
     .footer {
         margin-top: 6em;
         background-color: $primary;
@@ -148,6 +194,22 @@ section.newsletter {
             font-size: 1.6em;
             text-align: center;
             color: $secondary-light;
+        }
+
+        ul {
+
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin-bottom: 0.8em;
+            // justify-content: unset;
+            img {
+                width: 2.5em;
+            }
+            .youtube-logo {
+                position: relative;
+                top: 0.4em;
+            }
         }
 
     }

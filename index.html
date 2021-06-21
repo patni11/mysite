@@ -17,7 +17,9 @@
     <nav class="z-depth-0">
         <div class="navbar container">
             <a href="index.html" class="logo"> Shubh Patni</a>
-            <div class="menus">
+            
+            <div class="menus" id="menu">
+                <img class='exit'src="images/cross.svg" id="exit" alt="">
                 <ul>
                     <li><a href="#"> About</a></li>
                     <li><a href="#"> Articles</a></li>
@@ -26,7 +28,8 @@
                     <li><a href="#"> Projects</a></li>
                 </ul>
             </div>
-            <img class='hamburger'src="images/menu.svg" alt="">
+            
+            <img class='hamburger'src="images/menu.svg" id="hamburger" alt="">
         </div>
         <!-- NEED TO MAKE THE TOGGLE-->
     </nav>
@@ -46,10 +49,16 @@
         <h2 class="heading">Latest Articles</h2>
         <div class="articles-div container">
             <div class="article">
+                <div class="tag">
+                    <img src="images/crypto.svg" alt="">
+                </div>
                 <img class = "article-img" src="images/laptop.jpg" alt="">
                 <h4>Face ID for Mac</h4>
             </div>
             <div class="article">
+                <div class="tag">
+                    <img src="images/computer.svg" alt="">
+                </div>
                 <img class = "article-img" src="images/laptop.jpg" alt="">
                 <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, earum!</h4>
             </div>
@@ -62,20 +71,37 @@
             <p>Get the most useful pieces of infromation from all over the internet and secret compartments of my brain delivered right into your inbox, everyweek. </p>
             <form action="submit">
             <input type="text" placeholder="Your Email">
-            <button type="submit"> SUBMIT </button>
+            <button type="submit" class="submit-button"> SUBMIT </button>
         </form>
 
         </div>
         <div class="footer">
             <h4>@patnishubh 2021</h4>
+            
             <ul class="row center">
-                <li class="col"><a href="#"><img src="images/youtube.svg" alt=""></a></li>
-                <li class="col"><a href="#"><img src="images/insta.svg" alt=""></a></li>
-                <li class="col"><a href="#"><img src="images/twitter.svg" alt=""></a></li>
-                <li class="col"><a href="#"><img src="images/medium.svg" alt=""></a></li>
-                <li class="col"><a href="#"><img src="images/github.svg" alt=""></a></li>
+                <li class="col"><a href="https://www.youtube.com/channel/UCDXQNb3linY9EksWAvJhPyQ"><img src="images/youtube.svg" alt="" class="youtube-logo"></a></li>
+                <li class="col"><a href="https://www.instagram.com/patnishubh/"><img src="images/insta.svg" alt=""></a></li>
+                <li class="col"><a href="https://twitter.com/PatniShubh"><img src="images/twitter.svg" alt=""></a></li>
+                <li class="col"><a href="https://medium.com/@shubhpatni"><img src="images/medium.svg" alt=""></a></li>
+                <li class="col"><a href="https://github.com/patni11"><img src="images/github.svg" alt=""></a></li>
             </ul>
+
         </div>
     </section>
+
+    <script>
+        const menu = document.getElementById('hamburger')
+            nav = document.getElementById('menu')
+            menuExit = document.getElementById('exit');
+        
+        menu.addEventListener('click', () => {
+            nav.classList.add('menu-btn');
+        })
+
+        menuExit.addEventListener('click', () => {
+            nav.classList.remove('menu-btn');
+        })
+    </script>
+
 </body>
 </html>

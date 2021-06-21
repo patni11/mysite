@@ -9,6 +9,17 @@ a {
   cursor: pointer;
 }
 
+.menu-btn {
+  background: #2B2E4A;
+  padding: 1.2em;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  right: 0;
+  height: 100vh;
+  top: 0;
+}
+
 nav {
   background: #2B2E4A;
   position: fixed;
@@ -105,6 +116,22 @@ section.articles .articles-div .article {
   position: relative;
   border-radius: 1em;
   padding: 1.6em;
+  /*
+            &::before {
+                content: 'Tech';
+                display: inline-block;
+                width: 3.4em;
+                height: 3.4em;
+                background-color: $primary-light;
+                border-radius: 5em;
+                color: $secondary-light;
+                font-weight: bold;
+                padding: 0.85em;
+                position: absolute;
+                right: -1.8em;
+                top: -1.8em
+            }
+            */
 }
 
 section.articles .articles-div .article .article-img {
@@ -117,19 +144,26 @@ section.articles .articles-div .article h4 {
   margin: 0.5em 0 0;
 }
 
-section.articles .articles-div .article::before {
-  content: 'Tech';
+section.articles .articles-div .article .tag {
   display: inline-block;
   width: 3.4em;
   height: 3.4em;
   background-color: #3C4169;
-  border-radius: 5em;
+  border-radius: 50%;
   color: #FFFFFF;
   font-weight: bold;
   padding: 0.85em;
   position: absolute;
   right: -1.8em;
   top: -1.8em;
+}
+
+section.articles .articles-div .article .tag img {
+  width: 2.4em;
+  height: 2.4em;
+  position: relative;
+  right: 0.35em;
+  bottom: 0.35em;
 }
 
 section.newsletter {
@@ -148,6 +182,19 @@ section.newsletter p {
   text-align: center;
 }
 
+section.newsletter .submit-button {
+  display: inline-block;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0.8em 0;
+  background-color: #3C4169;
+  color: #DDDDDD;
+  font-weight: bold;
+  font-size: 1.2em;
+  border-radius: 6em;
+}
+
 section.newsletter .footer {
   margin-top: 6em;
   background-color: #2B2E4A;
@@ -158,5 +205,25 @@ section.newsletter .footer h4 {
   font-size: 1.6em;
   text-align: center;
   color: #FFFFFF;
+}
+
+section.newsletter .footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  margin-bottom: 0.8em;
+}
+
+section.newsletter .footer ul img {
+  width: 2.5em;
+}
+
+section.newsletter .footer ul .youtube-logo {
+  position: relative;
+  top: 0.4em;
 }
 /*# sourceMappingURL=main.css.map */
