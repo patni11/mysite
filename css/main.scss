@@ -1,0 +1,154 @@
+$primary: #2B2E4A;
+$primary-dark: #1A1C2F;
+$primary-light: #3C4169;
+$secondary: #F2F2F2;
+$secondary-dark: #DDDDDD;
+$secondary-light: #FFFFFF;
+
+body {
+    margin: 0;
+    background-color: $primary;
+    font-family: 'poppins';
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav {
+    background: $primary;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    .logo {
+        font-size: 1.5em;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .menus {
+        display: none;
+    }
+    .navbar {
+        // padding: 1em;
+        align-self: center;
+        position: relative;
+    }
+    .hamburger {
+        position: absolute;
+        right: 0;
+        top: 0.75em;
+        cursor: pointer;
+        width: 2.4em;
+        height: 2.4em;
+    }
+}
+
+.hero-container {
+    margin-top: 10em;
+
+    .left-col {
+        color: $secondary-light;
+
+        .hero-heading {
+            font-weight: bolder;
+            span {
+                display: block;
+            }
+        }
+        .hero-subheading {
+            font-weight: 400;
+            color: $secondary;
+            margin: 0.5em 0;
+        }
+    }
+    p {
+        font-family: 'roboto';
+        font-size: 1.8em;
+        color: $secondary-dark;
+        margin-top: 3em;
+        display: inline-block;
+        width: 50%;
+        position: relative;
+    }
+    img {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        margin-top: 5em;
+        height: 42%;
+    }
+}
+
+.heading {
+    font-weight: bolder;
+    color: $secondary-light;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+section.articles {
+    margin-top: 3em;
+    background-color: $primary-dark;
+    padding-top: 3em;
+    padding-bottom: 6em;
+    .articles-div {
+        .article {
+            margin: 4em 1em;
+            background-color: $primary-light;
+            position: relative;
+            border-radius: 1em;
+            padding: 1.6em;
+            .article-img {
+                width: 100%;
+            }
+            h4 {
+                font-size: 1.5em;
+                color: $secondary-light;
+                margin: 0.5em 0 0;
+            }
+            &::before {
+                content: 'Tech';
+                display: inline-block;
+                width: 3.4em;
+                height: 3.4em;
+                background-color: $primary-light;
+                border-radius: 5em;
+                color: $secondary-light;
+                font-weight: bold;
+                padding: 0.85em;
+                position: absolute;
+                right: -1.8em;
+                top: -1.8em
+            }
+        }
+    }
+}
+
+section.newsletter {
+    padding-top: 3em;
+    background-color: $secondary-light;
+    margin-bottom: 0;
+    h2 {
+        color: $primary;
+    }
+    p {
+        font-size: 1.2em;
+        color: $primary-light;
+        text-align: center;
+    }
+    .footer {
+        margin-top: 6em;
+        background-color: $primary;
+        padding: 0.2em;
+        h4 {
+            font-size: 1.6em;
+            text-align: center;
+            color: $secondary-light;
+        }
+
+    }
+}

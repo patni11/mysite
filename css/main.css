@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  background-color: #2B2E4A;
+  font-family: 'poppins';
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav {
+  background: #2B2E4A;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+}
+
+nav .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: left;
+}
+
+nav .menus {
+  display: none;
+}
+
+nav .navbar {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  position: relative;
+}
+
+nav .hamburger {
+  position: absolute;
+  right: 0;
+  top: 0.75em;
+  cursor: pointer;
+  width: 2.4em;
+  height: 2.4em;
+}
+
+.hero-container {
+  margin-top: 10em;
+}
+
+.hero-container .left-col {
+  color: #FFFFFF;
+}
+
+.hero-container .left-col .hero-heading {
+  font-weight: bolder;
+}
+
+.hero-container .left-col .hero-heading span {
+  display: block;
+}
+
+.hero-container .left-col .hero-subheading {
+  font-weight: 400;
+  color: #F2F2F2;
+  margin: 0.5em 0;
+}
+
+.hero-container p {
+  font-family: 'roboto';
+  font-size: 1.8em;
+  color: #DDDDDD;
+  margin-top: 3em;
+  display: inline-block;
+  width: 50%;
+  position: relative;
+}
+
+.hero-container img {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  margin-top: 5em;
+  height: 42%;
+}
+
+.heading {
+  font-weight: bolder;
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+section.articles {
+  margin-top: 3em;
+  background-color: #1A1C2F;
+  padding-top: 3em;
+  padding-bottom: 6em;
+}
+
+section.articles .articles-div .article {
+  margin: 4em 1em;
+  background-color: #3C4169;
+  position: relative;
+  border-radius: 1em;
+  padding: 1.6em;
+}
+
+section.articles .articles-div .article .article-img {
+  width: 100%;
+}
+
+section.articles .articles-div .article h4 {
+  font-size: 1.5em;
+  color: #FFFFFF;
+  margin: 0.5em 0 0;
+}
+
+section.articles .articles-div .article::before {
+  content: 'Tech';
+  display: inline-block;
+  width: 3.4em;
+  height: 3.4em;
+  background-color: #3C4169;
+  border-radius: 5em;
+  color: #FFFFFF;
+  font-weight: bold;
+  padding: 0.85em;
+  position: absolute;
+  right: -1.8em;
+  top: -1.8em;
+}
+
+section.newsletter {
+  padding-top: 3em;
+  background-color: #FFFFFF;
+  margin-bottom: 0;
+}
+
+section.newsletter h2 {
+  color: #2B2E4A;
+}
+
+section.newsletter p {
+  font-size: 1.2em;
+  color: #3C4169;
+  text-align: center;
+}
+
+section.newsletter .footer {
+  margin-top: 6em;
+  background-color: #2B2E4A;
+  padding: 0.2em;
+}
+
+section.newsletter .footer h4 {
+  font-size: 1.6em;
+  text-align: center;
+  color: #FFFFFF;
+}
+/*# sourceMappingURL=main.css.map */
