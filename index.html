@@ -14,54 +14,75 @@
 </head>
 
 <body>
-    <nav class="z-depth-0">
-        <div class="navbar container">
-            <a href="index.html" class="logo"> Shubh Patni</a>
-            
-            <div class="menus" id="menu">
-                <img class='exit'src="images/cross.svg" id="exit" alt="">
-                <ul>
+
+    <div class="navbar container">
+        <a href="index.html" class="logo"> Shubh Patni</a>
+        
+        <div class="menus nav z-depth-0" id="menu">   
+            <img class='exit'src="images/cross.svg" id="exit" alt="">
+                <ul class="mobile-nav">
                     <li><a href="#"> About</a></li>
                     <li><a href="#"> Articles</a></li>
                     <li><a href="#"> Courses</a></li>
                     <li><a href="#"> Resources</a></li>
                     <li><a href="#"> Projects</a></li>
                 </ul>
-            </div>
-            
-            <img class='hamburger'src="images/menu.svg" id="hamburger" alt="">
         </div>
+
+            <img class='hamburger'src="images/menu.svg" id="hamburger" alt="">
+    </div>
         <!-- NEED TO MAKE THE TOGGLE-->
-    </nav>
 
     <section class="hero-container">
         <div class="hero container">
             <div class="left-col">
                 <h1 class="hero-heading">👋 I am <span>Shubh Patni</span></h1>
-                <h4 class="hero-subheading">A Programmer, Blogger, and a YouTuber</h4>
+                <h4 class="hero-subheading">A Programmer, Blogger, <span> and a YouTuber </span></h4>
             </div>
+            <div class="right-col">
             <p class="hero-intro">Welcome to my headquarters, A place where you will find all of my work, work in progress, and the journey. Here you can learn about programming, crypto, and tech.</p>
             <img src="images/me.png" alt="">
+        </div>
         </div>
     </section>
 
     <section class="articles">
         <h2 class="heading">Latest Articles</h2>
         <div class="articles-div container">
-            <div class="article">
-                <div class="tag">
-                    <img src="images/crypto.svg" alt="">
+            <div class="left-col">
+                <div class="article">
+                    <div class="tag">
+                        <img src="images/crypto.svg" alt="">
+                    </div>
+                    <img class = "article-img" src="images/laptop.jpg" alt="">
+                    <h4>Face ID for Mac</h4>
                 </div>
-                <img class = "article-img" src="images/laptop.jpg" alt="">
-                <h4>Face ID for Mac</h4>
-            </div>
-            <div class="article">
-                <div class="tag">
-                    <img src="images/computer.svg" alt="">
+                <div class="article">
+                    <div class="tag">
+                        <img src="images/computer.svg" alt="">
+                    </div>
+                    <img class = "article-img" src="images/laptop.jpg" alt="">
+                    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, earum!</h4>
                 </div>
-                <img class = "article-img" src="images/laptop.jpg" alt="">
-                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, earum!</h4>
             </div>
+            
+            <div class="right-col">
+                <div class="article">
+                    <div class="tag">
+                        <img src="images/crypto.svg" alt="">
+                    </div>
+                    <img class = "article-img" src="images/laptop.jpg" alt="">
+                    <h4>Face ID for Mac</h4>
+                </div>
+                <div class="article">
+                    <div class="tag">
+                        <img src="images/computer.svg" alt="">
+                    </div>
+                    <img class = "article-img" src="images/laptop.jpg" alt="">
+                    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, earum!</h4>
+                </div>
+            </div>
+
         </div>
     </section>
 
