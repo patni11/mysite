@@ -136,17 +136,19 @@ section.articles {
         font-size: 3em;
     }
     .articles-div {
+        justify-content: space-around;
         .article {
             margin: 4em 1em;
             background-color: $primary-light;
             position: relative;
             border-radius: 1em;
             padding: 1em;
+            max-width: 400px;
             .article-img {
                 width: 100%;
             }
             h4 {
-                font-size: 1.5em;
+                font-size: 1.2em;
                 color: $secondary-light;
                 margin: 0.5em 0 0;
             }
@@ -258,6 +260,7 @@ section.newsletter {
             grid-template-columns: 180px auto;
             justify-content: unset;
             position: relative;
+            right: 0;
             width: 100%;
             height: auto;
         }
@@ -347,33 +350,29 @@ section.newsletter {
     }
 
 }
-/*
-h2 {
-        color: $primary;
-    }
-    p {
-        font-size: 1.2em;
-        color: $primary-light;
-        text-align: center;
-    }
-    input {
-        color: $primary;
-        &::placeholder {
-            
-            color: $primary-dark;
-            opacity: 0.5;
+
+@media only screen and(min-width: 1300px) {
+    .menus {
+        ul {
+            right: 0;
         }
     }
-    .submit-button {
-        display: inline-block;
-        width: 100%;
-        border: none;
-        outline: none;
-        padding: 0.8em 0;
-        background-color: $primary-light;
-        color: $secondary-dark;
-        font-weight: bold;
-        font-size: 1.2em;
-        border-radius: 6em;
+    .hero-container {
+        h1 {
+            font-size: 4.5em;
+        }
+        .hero-subheading {
+            margin: 0 0 4em;
+            font-size: 2em;
+            span {
+                display: block;
+            }
+        }
+
+        p {
+            margin-top: 4em;
+            font-size: 2em;
+        }
     }
-*/
+
+}

@@ -147,12 +147,18 @@ section.articles h2 {
   font-size: 3em;
 }
 
+section.articles .articles-div {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 section.articles .articles-div .article {
   margin: 4em 1em;
   background-color: #3C4169;
   position: relative;
   border-radius: 1em;
   padding: 1em;
+  max-width: 400px;
 }
 
 section.articles .articles-div .article .article-img {
@@ -160,7 +166,7 @@ section.articles .articles-div .article .article-img {
 }
 
 section.articles .articles-div .article h4 {
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: #FFFFFF;
   margin: 0.5em 0 0;
 }
@@ -307,6 +313,7 @@ section.newsletter .footer ul .youtube-logo {
         -ms-flex-pack: unset;
             justify-content: unset;
     position: relative;
+    right: 0;
     width: 100%;
     height: auto;
   }
@@ -392,34 +399,23 @@ section.newsletter .footer ul .youtube-logo {
   }
 }
 
-/*
-h2 {
-        color: $primary;
-    }
-    p {
-        font-size: 1.2em;
-        color: $primary-light;
-        text-align: center;
-    }
-    input {
-        color: $primary;
-        &::placeholder {
-            
-            color: $primary-dark;
-            opacity: 0.5;
-        }
-    }
-    .submit-button {
-        display: inline-block;
-        width: 100%;
-        border: none;
-        outline: none;
-        padding: 0.8em 0;
-        background-color: $primary-light;
-        color: $secondary-dark;
-        font-weight: bold;
-        font-size: 1.2em;
-        border-radius: 6em;
-    }
-*/
+@media only screen and (min-width: 1300px) {
+  .menus ul {
+    right: 0;
+  }
+  .hero-container h1 {
+    font-size: 4.5em;
+  }
+  .hero-container .hero-subheading {
+    margin: 0 0 4em;
+    font-size: 2em;
+  }
+  .hero-container .hero-subheading span {
+    display: block;
+  }
+  .hero-container p {
+    margin-top: 4em;
+    font-size: 2em;
+  }
+}
 /*# sourceMappingURL=main.css.map */
