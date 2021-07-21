@@ -1,0 +1,87 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/materialize.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+   
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
+
+    
+    <link rel="stylesheet" href="{% static 'css/main/main.css' %}">
+</head>
+
+<body>
+    
+    <div class="navbar">
+        
+        <div class="cont container">
+            
+        <a href="home" class="logo"> Shubh Patni</a>
+        
+        <div class="menus nav z-depth-0" id="menu"> 
+            <img class='exit'src="{% static 'images/cross.svg' %}" id="exit" alt="">
+                <ul class="mobile-nav">
+                    <li><a href="/about"> About</a></li>
+                    <li><a href="/articles"> Articles</a></li>
+                    <li><a href="/courses"> Courses</a></li>
+                    <li><a href="/resources"> Resources</a></li>
+                    <li><a href="/projects"> Projects</a></li>
+                </ul>
+        </div>
+            <img class='hamburger'src="{% static 'images/menu.svg' %}"  id="hamburger" alt="">
+        
+        </div>
+    
+        </div>
+
+        <!-- NEED TO MAKE THE TOGGLE-->
+
+        {% block content %}
+        {% endblock %}
+
+    <section class="newsletter">
+        <h2 class="heading">Newsletter</h2>
+        <div class="container">
+            <p>Get the most useful pieces of infromation from all over the internet and secret compartments of my brain delivered right into your inbox, everyweek. Unsubscribe anytime. </p>
+            <form action="submit">
+            <input type="text" placeholder="Your Email">
+            <button type="submit" class="submit-button"> SUBMIT </button>
+        </form>
+
+        </div>
+        <div class="footer">
+            <h4>@patnishubh 2021</h4>
+            
+            <ul class="row center">
+                <li class="col"><a href="https://www.youtube.com/channel/UCDXQNb3linY9EksWAvJhPyQ"><img src="{% static 'images/youtube.svg' %}" alt="" class="youtube-logo"></a></li>
+                <li class="col"><a href="https://www.instagram.com/patnishubh/"><img src="{% static 'images/insta.svg' %}" alt=""></a></li>
+                <li class="col"><a href="https://twitter.com/PatniShubh"><img src="{% static 'images/twitter.svg' %}" alt=""></a></li>
+                <li class="col"><a href="https://medium.com/@shubhpatni"><img src="{% static 'images/medium.svg' %}" alt=""></a></li>
+                <li class="col"><a href="https://github.com/patni11"><img src="{% static 'images/github.svg' %}" alt=""></a></li>
+            </ul>
+
+        </div>
+    </section>
+
+    <script>
+        const menu = document.getElementById('hamburger')
+            nav = document.getElementById('menu')
+            menuExit = document.getElementById('exit');
+        
+        menu.addEventListener('click', () => {
+            nav.classList.add('menu-btn');
+        })
+
+        menuExit.addEventListener('click', () => {
+            nav.classList.remove('menu-btn');
+        })
+    </script>
+
+</body>
+</html>

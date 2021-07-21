@@ -1,0 +1,58 @@
+
+{% extends "main/header.html" %}
+{% load static %}
+{% block content %}
+
+    <section class="hero-container">
+        <div class="hero container">
+            <div class="left-col">
+                <h1 class="hero-heading">👋 I am <span>Shubh Patni</span></h1>
+                <h4 class="hero-subheading">A Programmer, Blogger, <span> and a YouTuber </span></h4>
+            </div>
+            <div class="right-col">
+            <p class="hero-intro">Welcome to my headquarters, A place where you will find all of my work, work in progress, and the journey. Here you can learn about programming, crypto, and tech.</p>
+            
+            <img src="{% static 'images/me.png' %}" alt="">
+        </div>
+        </div>
+    </section>
+
+    <section class="articles">
+        <h2 class="heading">Latest Articles</h2>
+        <center>
+        <div class="articles-div container">
+            <div class="left-col">
+                {% for article in left %}
+                <a href="{{ article.medium_link }}" target="blank">
+                <div class="article">
+                    <img class = "article-img" src="{{ article.image.url }}" alt="">
+                    <h4>{{ article.title }}</h4>
+                    <ul>
+                        <li class="{{ article.tags }}">{{ article.tags }}</li>
+                    </ul>
+                    <p>{{ article.date_created }}</p>
+                </div>
+                </a>
+                {% endfor %}
+            </div>
+            
+            <div class="right-col">
+                {% for article in right %}
+                <a href="{{ article.medium_link }}" target="blank">
+                <div class="article">
+                    <img class = "article-img" src="{{ article.image.url }}" alt="">
+                    <h4>{{ article.title }}</h4>
+                    <ul>
+                        <li class="{{ article.tags }}">{{ article.tags }}</li>
+                    </ul>
+                    <p>{{ article.date_created }}</p>
+                </div>
+                </a>
+                {% endfor %}
+            </div>
+
+        </div>
+    </center>
+    </section>
+
+    {% endblock %}

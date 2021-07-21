@@ -1,0 +1,80 @@
+{% extends "main/header.html" %}
+{% load static %}
+{% block content %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/materialize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/articles/articles.css' %}">
+</head>
+
+    <!-- Need to include nav bar and footer-->
+    <section class="articles container">
+        <img src="{% static 'images/articles/writing.png' %}" alt="">
+        <h4>MY ARTICLES</h4>
+        <p> I started writing to better organize My thoughts, improve my learning, and share what i find useful. Now, I have been 5x top writer on medium with over 100k views. </p>
+    </section>
+
+    <section class="info">
+        <div class="container">
+            <div class="sort-by">
+                <h4> SORT BY</h4>
+                <ul>
+                    <li><a href="#">Technology</a></li>
+                    <li><a href="#">Crypto</a></li>
+                    <li><a href="#">Programming</a></li>
+                    <li><a href="#">Productivity</a></li>
+                </ul>
+            </div>
+    
+                <div class="articles-div">
+                    <center>
+                    <div class="left-col">
+                        <a href="#">
+                            {% include "includes/article.html" %}
+                    </a>
+                    <a href="#">
+                        <div class="article">
+                            <img class = "article-img" src="../images/laptop.jpg" alt="">
+                            <h4>Face ID for Mac</h4>
+                            <ul>
+                                <li class="Tech">Tech</li>
+                                <li class="Crypto">Crypto</li>
+                                <li class="Programming"> Programming</li>
+                            </ul>
+                            <p>June 28, 2021</p>
+                        </div>
+                    </a>
+                    </div>
+                    
+                    <div class="right-col">
+                        <a href="#">
+                            <div class="article">
+                                <img class = "article-img" src="../images/laptop.jpg" alt="">
+                                <h4>Face ID for Mac</h4>
+                                <ul>
+                                    <li class="Tech">Tech</li>
+                                    <li class="Crypto">Crypto</li>
+                                    <li class="Programming"> Programming</li>
+                                </ul>
+                                <p>June 28, 2021</p>
+                            </div>
+                    </a>
+                        <a href="#">
+                            <div class="article">
+                                <img class = "article-img" src="../images/laptop.jpg" alt="">
+                                <h4>Face ID for Mac</h4>
+                                <ul>
+                                    <li class="Tech">Tech</li>
+                                    <li class="Crypto">Crypto</li>
+                                    <li class="Programming"> Programming</li>
+                                </ul>
+                                <p>June 28, 2021</p>
+                            </div>
+                    </a>
+                    </div>
+                </center>
+                </div>
+
+        </div>
+    </section>
+{% endblock %}

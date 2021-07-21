@@ -1,0 +1,60 @@
+{% extends "main/header.html" %}
+{% load static %}
+{% block content %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/materialize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/resources/resources.css' %}">
+</head>
+
+    <!-- Need to include nav bar and footer-->
+    <section class="resources container">
+        <img src="{% static 'images/resources/resources.png' %}" alt="">
+        <h4>FREE RESOURCES</h4>
+        <p> I have searched around the internet to find  the most useful resources to help you learn about programming, crypto, and more </p>
+    </section>
+
+    <section class="info">
+
+        <div class="container">
+            
+            
+            <div class="left-col">
+            <div class="resource">
+                <img src="{% static 'images/courses/python course.png' %}" alt="">
+                <h6>Curated List of Resources To Learn About Crypto
+
+        <script src="https://gumroad.com/js/gumroad.js"></script>
+        <a class="gumroad-button" href="https://gumroad.com/l/tdTnk?wanted=true">Get This</a>
+        </h6>
+
+            </div>
+            <div class="resource">
+                <img src="{% static 'images/courses/python course.png' %}" alt="">
+                <h6>Python Beginner to Advanced Course [Free Course]</h6>
+                <script src="https://gumroad.com/js/gumroad.js"></script>
+        <a class="gumroad-button" href="https://gumroad.com/l/tdTnk?wanted=true">Get This</a>
+            </div>
+
+            </div>
+        
+            <div class="right-col">
+                <div class="resource">
+                    <img src="{% static 'images/courses/python course.png' %}" alt="">
+                    <h6>Python Beginner to Advanced Course [Free Course]</h6>
+                    <script src="https://gumroad.com/js/gumroad.js"></script>
+        <a class="gumroad-button" href="https://gumroad.com/l/tdTnk?wanted=true">Get This</a>
+                </div>
+                <div class="resource">
+                    <img src="{% static 'images/courses/python course.png' %}" alt="">
+                    <h6>Python Beginner to Advanced Course [Free Course]</h6>
+                    <script src="https://gumroad.com/js/gumroad.js"></script>
+        <a class="gumroad-button" href="https://gumroad.com/l/tdTnk?wanted=true">Get This</a>
+                </div>
+            </div>
+        
+        </div>
+    
+    </section>
+
+{% endblock %}

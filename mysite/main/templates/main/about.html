@@ -1,0 +1,58 @@
+{% extends "main/header.html" %}
+{% load static %}
+{% block content %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/materialize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about/about.css' %}">
+</head>
+
+    <!-- Need to include nav bar and footer-->
+    <section class="about container">
+        <img src="{% static 'images/about/me.png' %}" alt="">
+        <h4>ABOUT ME</h4>
+        <p> As of 2021, I am 18 year old computer science student at northeastern university, Boston. I learned to program when i was 15 and started my youtube channel and blog on 2020 to share everything I know. I am interested in crypto, making websites, small iot projects and tech in general. </p>
+    </section>
+
+    <section class="info">
+        <div class="container">
+        <div class="Now part">
+            <h4>Now</h4>
+            <h5>What I am Up To</h5>
+            <div class="details">
+                <ul>
+                    <li>I am working on youTube channel and a blog to build a distrubution system for any service/product I might release in the future</li>
+                    <li>Working on part 2 of my python course which would focus on the application of python by making a portfolio website (like this one) using django</li>
+                    <li>Thinking of starting a newsletter to share and archive usefull quotes, things, blog posts, articles, podcasts, or any resource I create or find on the internet</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="Learning part">
+            <h4>Learning</h4>
+            <h5>THINGS I WISH TO LEARN, AND SKILLS I WANT TO DEVELOP</h5>
+            <div class="details">
+                <ul>
+                    <li>WANT TO LEARN FULL-STACK DEVELOPMENT TO HOST ALL THE PROJECTS I HAVE MADE AND MONETIZE THEM </li>
+                    <li>WANT TO LEARN MORE ABOUT CRYPTO. CONFUSED B/W AI AND BLOCKCHAIN </li>
+                    <li>BECOME A BETTER PHOTOGRAPHER </li>
+                    <li>BECOME A DESCENT COOK TO BE  ABLE TO MAKE ANYTHING</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="contact part">
+            <h4>Get In Touch</h4>
+            <h5>If you want to hire me, want some advice, or would like to share thoughts</h5>
+            <div class="details">
+                <ul>
+                    <li>if you want short advice, have questions, YOu can reach me out on twitter on instagram DM, i prefer twitter. Just tag me @patnishubh with your question.</li>
+                    <li>if you want to hire me, you can reach me at shubhpatni2002@gmail.com </li>
+                   
+                </ul>
+            </div>
+        </div>
+    </div>
+    </section>
+
+{% endblock %}
