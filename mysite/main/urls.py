@@ -21,11 +21,12 @@ from .views import *
 app_name = "main"
 
 urlpatterns = [
+    path('home', Homepage.as_view(), name="home"),
     path('articles', ArticlePage.as_view(), name="articles"),
-    path('home', Homepage.as_view(), name="homepage"),
+    path('articles/<str:tag>/', ArticlePage.as_view(), name="articles"),
     path('about', views.about, name="about"),
-    path('courses', views.courses, name="courses"),
-    path('resources', views.resources, name="resources"),
+    path('courses', CoursePage.as_view(), name="courses"),
+    path('resources', ResourcesPage.as_view(), name="resources"),
     path('projects', views.projects, name="projects"),
 
 ]

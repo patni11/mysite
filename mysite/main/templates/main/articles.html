@@ -15,66 +15,35 @@
     </section>
 
     <section class="info">
-        <div class="container">
-            <div class="sort-by">
+            <div class="sort-by container">
                 <h4> SORT BY</h4>
                 <ul>
-                    <li><a href="#">Technology</a></li>
-                    <li><a href="#">Crypto</a></li>
-                    <li><a href="#">Programming</a></li>
-                    <li><a href="#">Productivity</a></li>
+                    <li><a href="/articles/Tech">Technology</a></li>
+                    <li><a href="/articles/Crypto">Crypto</a></li>
+                    <li><a href="/articles/Programming">Programming</a></li>
+                    <li><a href="/articles/Productivity">Productivity</a></li>
                 </ul>
             </div>
-    
-                <div class="articles-div">
-                    <center>
+            <center>
+                <div class="articles-div container">
                     <div class="left-col">
-                        <a href="#">
-                            {% include "includes/article.html" %}
-                    </a>
-                    <a href="#">
-                        <div class="article">
-                            <img class = "article-img" src="../images/laptop.jpg" alt="">
-                            <h4>Face ID for Mac</h4>
-                            <ul>
-                                <li class="Tech">Tech</li>
-                                <li class="Crypto">Crypto</li>
-                                <li class="Programming"> Programming</li>
-                            </ul>
-                            <p>June 28, 2021</p>
-                        </div>
-                    </a>
+                        {% for article in left %}
+                        {% include "main/includes/article.html" with link=article.medium_link image=article.image.url title=article.title tags=article.tags date=article.date_created %}
+                        {% endfor %}
+                    </div>
+                    <div class="mid-col">
+                        {% for article in middle %}
+                        {% include "main/includes/article.html" with link=article.medium_link image=article.image.url title=article.title tags=article.tags date=article.date_created %}
+                        {% endfor %}
                     </div>
                     
                     <div class="right-col">
-                        <a href="#">
-                            <div class="article">
-                                <img class = "article-img" src="../images/laptop.jpg" alt="">
-                                <h4>Face ID for Mac</h4>
-                                <ul>
-                                    <li class="Tech">Tech</li>
-                                    <li class="Crypto">Crypto</li>
-                                    <li class="Programming"> Programming</li>
-                                </ul>
-                                <p>June 28, 2021</p>
-                            </div>
-                    </a>
-                        <a href="#">
-                            <div class="article">
-                                <img class = "article-img" src="../images/laptop.jpg" alt="">
-                                <h4>Face ID for Mac</h4>
-                                <ul>
-                                    <li class="Tech">Tech</li>
-                                    <li class="Crypto">Crypto</li>
-                                    <li class="Programming"> Programming</li>
-                                </ul>
-                                <p>June 28, 2021</p>
-                            </div>
-                    </a>
+                        {% for article in right %}
+                        {% include "main/includes/article.html" with link=article.medium_link image=article.image.url title=article.title tags=article.tags date=article.date_created %}
+                        {% endfor %}
                     </div>
-                </center>
+                
                 </div>
-
-        </div>
+            </center>
     </section>
 {% endblock %}

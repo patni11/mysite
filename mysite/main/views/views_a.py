@@ -1,8 +1,9 @@
-from main.models import Articles
+from main.models import Articles, Courses, Product
 from django.shortcuts import render
 from .medium_scraper import add_new_article
 from django.views.generic import ListView
-#from .articles import change_all_tags, add_all_articles
+from .articles import left_middle_right
+from .courses import left_right
 # Create your views here.
 
 
@@ -12,39 +13,63 @@ class Homepage(ListView):
 
     def get_context_data(self, **kwargs):
         article_data = super(Homepage, self).get_context_data(**kwargs)
-        article_data['left'] = Articles.objects.order_by('-date_created')[
-            :2]
-        article_data['right'] = Articles.objects.order_by('-date_created')[
-            2:4]
+        articles = Articles.objects.order_by('-date_created')
+
+        article_data['left'] = articles[:2]
+        article_data['right'] = articles[2:4]
         return article_data
-
-    '''
-    def get_queryset(self, *args, **kwargs):
-        qs = super(Homepage, self).get_queryset(*args, **kwargs)
-        qs['left-col'] = qs.order_by("-date_created")[:2]
-        qs['right-col'] = qs.order_by("-date_created")[2:4]
-        return qs
-    '''
-
-
-'''
-def homepage(request):
-    latest_articles = Articles.objects.order_by('-date_created')[:4]
-    return render(request, template_name=, context={articles: latest_articles})
-'''
 
 
 class ArticlePage(ListView):
-    template_name = "main/articles.html"
     model = Articles
+    template_name = "main/articles.html"
+
+    def get_context_data(self, **kwargs):
+        article_data = super(ArticlePage, self).get_context_data(**kwargs)
+
+        tag = self.kwargs.get('tag', None)
+        if tag != None:
+            if tag in "Tech Programming Productivity Crypto":
+                articles = Articles.objects.filter(
+                    tags=tag).order_by('-date_created')
+        else:
+            articles = Articles.objects.order_by('-date_created')
+
+        left, middle, right = left_middle_right(articles)
+        article_data['left'] = left
+        article_data['middle'] = middle
+        article_data['right'] = right
+        return article_data
 
 
-def courses(request):
-    return render(request, template_name="main/courses.html")
+class CoursePage(ListView):
+    model = Courses
+    template_name = "main/courses.html"
+
+    def get_context_data(self, **kwargs):
+        course_data = super(CoursePage, self).get_context_data(**kwargs)
+        courses = Courses.objects.all()
+        left, right = left_right(courses)
+
+        course_data['left'] = left
+        course_data['right'] = right
+
+        return course_data
 
 
-def resources(request):
-    return render(request, template_name="main/resources.html")
+class ResourcesPage(ListView):
+    model = Product
+    template_name = "main/resources.html"
+
+    def get_context_data(self, **kwargs):
+        resource_data = super(ResourcesPage, self).get_context_data(**kwargs)
+        resources = Product.objects.all()
+        left, right = left_right(resources)
+
+        resource_data['left'] = left
+        resource_data['right'] = right
+
+        return resource_data
 
 
 def projects(request):

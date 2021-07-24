@@ -15,12 +15,19 @@
     </section>
 
     <section class="info">
-        <div class="container">
-            <div class="course">
-                <img src="{% static 'images/courses/python course.png' %}" alt="">
-                <h6>Python Beginner to Advanced Course [Free Course]</h6>
-            </div>
-            <h6 class="coming-soon">More Coming Soon</h6>
+        <div class="courses-div container">
+        <div class="left-col">
+            {% for course in left %}
+            {% include "main/includes/course.html" with link=course.course_link image=course.image.url title=course.title cost=course.cost%}
+            {% endfor %}
         </div>
+        <div class="right-col">
+            {% for course in right %}
+            {% include "main/includes/course.html" with link=course.course_link image=course.image.url title=course.title cost=course.cost%}
+            {% endfor %}
+        </div>
+    </div>
+            <h6 class="coming-soon">More Coming Soon</h6>
     </section>
+
 {% endblock %}

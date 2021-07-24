@@ -16,43 +16,18 @@
 
     <section class="info">
 
-        <div class="container">
-            
+        <div class="resources container">
             
             <div class="left-col">
-            <div class="resource">
-                <img src="{% static 'images/courses/python course.png' %}" alt="">
-                <h6>Curated List of Resources To Learn About Crypto
-
-        <script src="https://gumroad.com/js/gumroad.js"></script>
-        <a class="gumroad-button" href="https://gumroad.com/l/tdTnk?wanted=true">Get This</a>
-        </h6>
-
+                {% for resource in left %}
+                {% include "main/includes/resource.html" with link=resource.product_link image=resource.image.url title=resource.title %}
+                {% endfor %}
             </div>
-            <div class="resource">
-                <img src="{% static 'images/courses/python course.png' %}" alt="">
-                <h6>Python Beginner to Advanced Course [Free Course]</h6>
-                <script src="https://gumroad.com/js/gumroad.js"></script>
-        <a class="gumroad-button" href="https://gumroad.com/l/tdTnk?wanted=true">Get This</a>
-            </div>
-
-            </div>
-        
             <div class="right-col">
-                <div class="resource">
-                    <img src="{% static 'images/courses/python course.png' %}" alt="">
-                    <h6>Python Beginner to Advanced Course [Free Course]</h6>
-                    <script src="https://gumroad.com/js/gumroad.js"></script>
-        <a class="gumroad-button" href="https://gumroad.com/l/tdTnk?wanted=true">Get This</a>
-                </div>
-                <div class="resource">
-                    <img src="{% static 'images/courses/python course.png' %}" alt="">
-                    <h6>Python Beginner to Advanced Course [Free Course]</h6>
-                    <script src="https://gumroad.com/js/gumroad.js"></script>
-        <a class="gumroad-button" href="https://gumroad.com/l/tdTnk?wanted=true">Get This</a>
-                </div>
+                {% for resource in right %}
+                {% include "main/includes/resource.html" with link=resource.product_link image=resource.image.url title=resource.title %}
+                {% endfor %}
             </div>
-        
         </div>
     
     </section>

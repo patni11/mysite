@@ -34,8 +34,10 @@ class Projects(models.Model):
 
 class Courses(models.Model):
     title = models.CharField(max_length=300)
-    # image = models.ImageField(upload_to="", blank=True)
+    image = models.ImageField(
+        upload_to="courses/", blank=True, null=True)
     course_link = models.URLField(default="Course is not currently available")
+    cost = models.CharField(max_length=10, default="Free")
 
     def __str__(self):
         return self.title
@@ -43,7 +45,7 @@ class Courses(models.Model):
 
 class Product(models.Model):
     title = models.CharField(max_length=300)
-    # image = models.ImageField(upload_to="", blank=True)
+    image = models.ImageField(upload_to="", blank=True)
     product_link = models.URLField(
         default="Product is not available")
 

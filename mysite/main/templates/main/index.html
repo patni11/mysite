@@ -23,31 +23,13 @@
         <div class="articles-div container">
             <div class="left-col">
                 {% for article in left %}
-                <a href="{{ article.medium_link }}" target="blank">
-                <div class="article">
-                    <img class = "article-img" src="{{ article.image.url }}" alt="">
-                    <h4>{{ article.title }}</h4>
-                    <ul>
-                        <li class="{{ article.tags }}">{{ article.tags }}</li>
-                    </ul>
-                    <p>{{ article.date_created }}</p>
-                </div>
-                </a>
+                {% include "main/includes/article.html" with link=article.medium_link image=article.image.url title=article.title tags=article.tags date=article.date_created %}
                 {% endfor %}
             </div>
             
             <div class="right-col">
                 {% for article in right %}
-                <a href="{{ article.medium_link }}" target="blank">
-                <div class="article">
-                    <img class = "article-img" src="{{ article.image.url }}" alt="">
-                    <h4>{{ article.title }}</h4>
-                    <ul>
-                        <li class="{{ article.tags }}">{{ article.tags }}</li>
-                    </ul>
-                    <p>{{ article.date_created }}</p>
-                </div>
-                </a>
+                {% include "main/includes/article.html" with link=article.medium_link image=article.image.url title=article.title tags=article.tags date=article.date_created %}
                 {% endfor %}
             </div>
 

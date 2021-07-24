@@ -64,7 +64,22 @@ section.info h4 {
   margin-top: 1.4em;
 }
 
-section.info .course {
+section.info .courses-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+section.info .courses-div .left-col,
+section.info .courses-div .right-col {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+}
+
+section.info .courses-div .course {
   margin: auto;
   display: block;
   width: 80%;
@@ -75,12 +90,24 @@ section.info .course {
   max-width: 600px;
 }
 
-section.info .course img {
+section.info .courses-div .course img {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 16 / 9;
 }
 
-section.info .course h6 {
+section.info .courses-div .course h6 {
   color: #FFFFFF;
+}
+
+section.info .courses-div .course .p {
+  padding: 0.2em 1em;
+  margin: 0 0.5em;
+  border-radius: 0.5em;
+  color: #FFFFFF;
+  font-size: 0.8em;
+  font-weight: bold;
 }
 
 section.info h6.coming-soon {
@@ -89,5 +116,9 @@ section.info h6.coming-soon {
   color: #F2F2F2;
   font-weight: bold;
   margin-bottom: -1.2em;
+}
+
+.free {
+  background-color: #01937C;
 }
 /*# sourceMappingURL=courses.css.map */

@@ -96,6 +96,11 @@ ul.mobile-nav li a:hover {
   font-size: 3.4em;
 }
 
+ul.mobile-nav li a a:active {
+  font-weight: bold;
+  font-size: 3.4em;
+}
+
 .hero-container {
   margin-top: 6em;
 }
@@ -153,16 +158,32 @@ section.articles {
   margin-top: 3em;
   background-color: #1A1C2F;
   padding-top: 3em;
-  padding-bottom: 2em;
+  padding-bottom: 5em !important;
 }
 
 section.articles h2 {
   font-size: 3em;
+  margin-bottom: 1em !important;
 }
 
 section.articles .articles-div {
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  justify-content: space-around;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*
+        .right-col {
+            display: none;
+        }*/
+}
+
+section.articles .articles-div .left-col,
+section.articles .articles-div .right-col {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
 }
 
 section.articles .articles-div .article {
@@ -174,13 +195,14 @@ section.articles .articles-div .article {
   background-color: rgba(221, 221, 221, 0.2);
   border-radius: 0.3em;
   max-width: 600px;
+  aspect-ratio: 16 / 9;
 }
 
 section.articles .articles-div .article img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  max-height: 337px;
+  aspect-ratio: 16 / 9;
 }
 
 section.articles .articles-div .article h4 {
@@ -217,10 +239,6 @@ section.articles .articles-div .article:hover {
   width: 82%;
   -webkit-box-shadow: 2em 2em 60% #000000;
           box-shadow: 2em 2em 60% #000000;
-}
-
-section.articles .articles-div .right-col {
-  display: none;
 }
 
 .Tech {

@@ -98,6 +98,17 @@ section.info ul::after {
 section.info .articles-div {
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section.info .articles-div .left-col,
+section.info .articles-div .right-col,
+section.info .articles-div .mid-col {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
 }
 
 section.info .articles-div .article {
@@ -109,10 +120,14 @@ section.info .articles-div .article {
   background-color: rgba(221, 221, 221, 0.2);
   border-radius: 0.3em;
   max-width: 600px;
+  aspect-ratio: 16 / 9;
 }
 
 section.info .articles-div .article img {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 16 / 9;
 }
 
 section.info .articles-div .article h4 {
@@ -133,19 +148,13 @@ section.info .articles-div .article ul li {
   padding: 0.2em 1em;
   margin: 0 0.5em;
   border-radius: 0.5em;
+  color: #FFFFFF;
   font-size: 0.8em;
+  font-weight: bold;
 }
 
-section.info .articles-div .article ul li .Tech {
-  background-color: #3D84B8;
-}
-
-section.info .articles-div .article ul li .Crypto {
-  background-color: #FF8303;
-}
-
-section.info .articles-div .article ul li .Programming {
-  background-color: #01937C;
+section.info .articles-div .article ul::after {
+  display: none;
 }
 
 section.info .articles-div .article p {
@@ -161,8 +170,20 @@ section.info .articles-div .article:hover {
           box-shadow: 2em 2em 60% #000000;
 }
 
-section.info .articles-div .right-col {
-  display: none;
+.Tech {
+  background-color: #3D84B8;
+}
+
+.Crypto {
+  background-color: #FF8303;
+}
+
+.Programming {
+  background-color: #01937C;
+}
+
+.Productivity {
+  background-color: #a8026f;
 }
 
 @media only screen and (min-width: 768px) {
@@ -181,6 +202,14 @@ section.info .articles-div .right-col {
   section.info .articles-div .right-col {
     display: inline-block;
     margin-left: 1em;
+  }
+  section.info .articles-div .article {
+    width: 100%;
+  }
+  section.info .articles-div .article:hover {
+    width: 102%;
+    -webkit-box-shadow: 2em 2em 60% #000000;
+            box-shadow: 2em 2em 60% #000000;
   }
 }
 /*# sourceMappingURL=articles.css.map */

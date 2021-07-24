@@ -9,6 +9,7 @@ $secondary-light: #FFFFFF;
 $tech: #3D84B8;
 $crypto: #FF8303;
 $programming: #01937C;
+$productivity: #a8026f;
 
 body {
     margin: 0;
@@ -100,7 +101,12 @@ section.info {
 
     .articles-div {
         justify-content: space-around;
-
+        display: flex;
+        .left-col,
+        .right-col,
+        .mid-col {
+            flex: 1 1 0
+        }
         .article {
             margin: 2em;
             display: inline-block;
@@ -110,9 +116,11 @@ section.info {
             background-color: rgba($secondary-dark, 0.2);
             border-radius: 0.3em;
             max-width: 600px;
-
+            aspect-ratio: 16 / 9;
             img {
                 width: 100%;
+                object-fit: cover;
+                aspect-ratio: 16 / 9;
             }
             h4 {
                 color: $secondary-light;
@@ -127,16 +135,12 @@ section.info {
                     padding: 0.2em 1em;
                     margin: 0 0.5em;
                     border-radius: 0.5em;
+                    color: $secondary-light;
                     font-size: 0.8em;
-                    .Tech {
-                        background-color: $tech;
-                    }
-                    .Crypto {
-                        background-color: $crypto;
-                    }
-                    .Programming {
-                        background-color: $programming;
-                    }
+                    font-weight: bold;
+                }
+                &::after {
+                    display: none;
                 }
             }
             p {
@@ -149,14 +153,25 @@ section.info {
                 width: 82%;
                 box-shadow: 2em 2em 60% #000000;
             }
+
         }
 
-        .right-col {
-            display: none;
-        }
     }
+
 }
 
+.Tech {
+    background-color: $tech;
+}
+.Crypto {
+    background-color: $crypto;
+}
+.Programming {
+    background-color: $programming;
+}
+.Productivity {
+    background-color: $productivity;
+}
 
 @media only screen and(min-width: 768px) {
     section.info {
@@ -172,6 +187,13 @@ section.info {
             .right-col {
                 display: inline-block;
                 margin-left: 1em;
+            }
+            .article {
+                width: 100%;
+                &:hover {
+                    width: 102%;
+                    box-shadow: 2em 2em 60% #000000;
+                }
             }
         }
     }

@@ -6,7 +6,7 @@ import os
 import pandas as pd
 import calendar
 from django.conf import settings
-from .articles import add_article_to_database
+from .articles import add_article_to_database, image_name
 
 
 def download_image(image_url, filename):
@@ -75,8 +75,9 @@ def add_new_article():
             print("New Article Added:  ", each)
 
             download_image(new_articles[each]['thumbnail'], each)
+            image_name = image_name(each)
             new_article_data[
-                "image_path"] = f"/article_images/{each}.png"
+                "image_path"] = f"/article_images/{image_name}.png"
 
             add_article_to_database(new_article_data)
 
