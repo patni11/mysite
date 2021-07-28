@@ -46,12 +46,16 @@
         {% endblock %}
 
     <section class="newsletter">
-        <h2 class="heading">Figuring It Out Newsletter</h2>
+        <h2 class="heading">My Newsletter</h2>
         <div class="container">
-  
+            <!--
             <p> 
                 I'm 18 and still trying to figure out what I want to do 🤓 
                 My interests revolve around crypto ฿, remote work 🌏, web dev 🧑‍💻, and random things ☕️📹🎮📚. I will share with you everything I know about these things and how to make money while learning them. <i><strong>The goal is to figure it out.</strong></i>
+            </p>
+            -->
+            <p> I am not issuing any newsletters yet, but I plan to do it soon. If you are familiar with my content and 
+                would like to be the first few to know when I release my newsletter, you can enter your mail 😁
             </p>
             <form action="https://www.getrevue.co/profile/patnishubh/add_subscriber" method="post" id="revue-form" name="revue-form"  target="_blank" class="form">
                 <input class="revue-form-field input-field" placeholder="Your email address..." type="email" name="member[email]" id="member_email">
@@ -63,20 +67,29 @@
         </form>
 
         </div>
-        <div class="footer">
-            <h4>@patnishubh</h4>
-            
-            <ul class="row center">
-                <li class="col"><a href="https://www.youtube.com/channel/UCDXQNb3linY9EksWAvJhPyQ"><img src="{% static 'images/youtube.svg' %}" alt="" class="youtube-logo"></a></li>
-                <li class="col"><a href="https://www.instagram.com/patnishubh/"><img src="{% static 'images/insta.svg' %}" alt=""></a></li>
-                <li class="col"><a href="https://twitter.com/PatniShubh"><img src="{% static 'images/twitter.svg' %}" alt=""></a></li>
-                <li class="col"><a href="https://medium.com/@shubhpatni"><img src="{% static 'images/medium.svg' %}" alt=""></a></li>
-                <li class="col"><a href="https://github.com/patni11"><img src="{% static 'images/github.svg' %}" alt=""></a></li>
-            </ul>
 
-        </div>
     </section>
 
+    <section class="support">
+        <center>
+    <div class="container">
+        <h2 class="heading">Would Like to Support Me?</h2>
+        <p> If my content have helped you in any way and you wish to support me so I can create more content, you can just pay for any of my <span> <a href="/resources"> Resources </a> </span>. This would help me + help you out, a win-win 🙌</p>
+    </div>
+</center>
+</section>
+<div class="footer">
+    <h4>@patnishubh</h4>
+    
+    <ul class="row center">
+        <li class="col"><a href="https://www.youtube.com/channel/UCDXQNb3linY9EksWAvJhPyQ"><img src="{% static 'images/youtube.svg' %}" alt="" class="youtube-logo"></a></li>
+        <li class="col"><a href="https://www.instagram.com/patnishubh/"><img src="{% static 'images/insta.svg' %}" alt=""></a></li>
+        <li class="col"><a href="https://twitter.com/PatniShubh"><img src="{% static 'images/twitter.svg' %}" alt=""></a></li>
+        <li class="col"><a href="https://medium.com/@shubhpatni"><img src="{% static 'images/medium.svg' %}" alt=""></a></li>
+        <li class="col"><a href="https://github.com/patni11"><img src="{% static 'images/github.svg' %}" alt=""></a></li>
+    </ul>
+
+</div>
     <script>
         const menu = document.getElementById('hamburger')
             nav = document.getElementById('menu')

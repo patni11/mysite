@@ -188,7 +188,7 @@ section.articles .articles-div {
 }
 
 section.newsletter {
-  padding-top: 3em;
+  padding: 3em 0;
   background-color: #DDDDDD;
   margin-bottom: 0;
 }
@@ -226,19 +226,47 @@ section.newsletter .form .revue-form-footer a {
   color: #1A1C2F;
 }
 
-section.newsletter .footer {
-  margin-top: 6em;
+.support {
+  margin: 0;
+  padding: 2em 0;
+  background-color: #1A1C2F;
+}
+
+.support h2 {
+  font-size: 2em;
+  color: #FFFFFF;
+  margin-top: 0;
+}
+
+.support p {
+  margin-bottom: 0;
+  display: block;
+  width: 70%;
+  color: #F2F2F2;
+  text-align: center;
+}
+
+.support p span {
+  font-weight: bold;
+  font-size: 1.05em;
+}
+
+.support p span a {
+  color: #F2F2F2;
+}
+
+.footer {
   background-color: #2B2E4A;
   padding: 0.2em;
 }
 
-section.newsletter .footer h4 {
+.footer h4 {
   font-size: 1.2em;
   text-align: center;
   color: #FFFFFF;
 }
 
-section.newsletter .footer ul {
+.footer ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -249,13 +277,13 @@ section.newsletter .footer ul {
   margin-bottom: 0.8em;
 }
 
-section.newsletter .footer ul img {
+.footer ul img {
   width: 1.6em;
   -webkit-filter: invert(1) hue-rotate(90deg);
           filter: invert(1) hue-rotate(90deg);
 }
 
-section.newsletter .footer ul .youtube-logo {
+.footer ul .youtube-logo {
   position: relative;
   top: 0.4em;
 }

@@ -175,7 +175,7 @@ section.articles {
 }
 
 section.newsletter {
-    padding-top: 3em;
+    padding: 3em 0;
     background-color: $secondary-dark;
     margin-bottom: 0;
     h2 {
@@ -210,34 +210,60 @@ section.newsletter {
         }
     }
 
-    .footer {
-        margin-top: 6em;
-        background-color: $primary;
-        padding: 0.2em;
-        h4 {
-            font-size: 1.2em;
-            text-align: center;
-            color: $secondary-light;
-        }
+}
+.support {
+    margin: 0;
+    padding: 2em 0;
+    background-color: $primary-dark;
 
-        ul {
-
-            display: flex;
-            justify-content: center;
-            padding: 0;
-            margin-bottom: 0.8em;
-            // justify-content: unset;
-            img {
-                width: 1.6em;
-                filter: invert(1) hue-rotate(90deg);
-            }
-            .youtube-logo {
-                position: relative;
-                top: 0.4em;
-            }
-        }
-
+    h2 {
+        font-size: 2em;
+        color: $secondary-light;
+        margin-top: 0;
     }
+    p {
+        margin-bottom: 0;
+        display: block;
+        width: 70%;
+        color: $secondary;
+        text-align: center;
+        span {
+            font-weight: bold;
+            font-size: 1.05em;
+            a {
+                color: $secondary;
+            }
+
+        }
+    }
+}
+
+.footer {
+    background-color: $primary;
+    padding: 0.2em;
+    h4 {
+        font-size: 1.2em;
+        text-align: center;
+        color: $secondary-light;
+    }
+
+    ul {
+
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin-bottom: 0.8em;
+        // justify-content: unset;
+        img {
+            width: 1.6em;
+            filter: invert(1) hue-rotate(90deg);
+        }
+        .youtube-logo {
+            position: relative;
+            top: 0.4em;
+        }
+    }
+
 }
 ::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
