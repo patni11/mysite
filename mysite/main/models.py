@@ -51,3 +51,13 @@ class Product(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class About(models.Model):
+    header = models.TextField()
+    now = models.TextField()
+    learning = models.TextField()
+    get_in_touch = models.TextField()
+
+    def __str__(self):
+        return "about"

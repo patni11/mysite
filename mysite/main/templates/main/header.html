@@ -46,17 +46,25 @@
         {% endblock %}
 
     <section class="newsletter">
-        <h2 class="heading">Newsletter</h2>
+        <h2 class="heading">Figuring It Out Newsletter</h2>
         <div class="container">
-            <p>Get the most useful pieces of infromation from all over the internet and secret compartments of my brain delivered right into your inbox, everyweek. Unsubscribe anytime. </p>
-            <form action="submit">
-            <input type="text" placeholder="Your Email">
-            <button type="submit" class="submit-button"> SUBMIT </button>
+  
+            <p> 
+                I'm 18 and still trying to figure out what I want to do 🤓 
+                My interests revolve around crypto ฿, remote work 🌏, web dev 🧑‍💻, and random things ☕️📹🎮📚. I will share with you everything I know about these things and how to make money while learning them. <i><strong>The goal is to figure it out.</strong></i>
+            </p>
+            <form action="https://www.getrevue.co/profile/patnishubh/add_subscriber" method="post" id="revue-form" name="revue-form"  target="_blank" class="form">
+                <input class="revue-form-field input-field" placeholder="Your email address..." type="email" name="member[email]" id="member_email">
+                <div class="revue-form-actions">
+                    <input class="button"type="submit" value="Subscribe" name="member[subscribe]" id="member_submit">
+                  </div>
+                  <br>
+                  <div class="revue-form-footer">By subscribing, you agree with Revue’s <a target="_blank" href="https://www.getrevue.co/terms">Terms of Service</a> and <a target="_blank" href="https://www.getrevue.co/privacy">Privacy Policy</a>.</div>
         </form>
 
         </div>
         <div class="footer">
-            <h4>@patnishubh 2021</h4>
+            <h4>@patnishubh</h4>
             
             <ul class="row center">
                 <li class="col"><a href="https://www.youtube.com/channel/UCDXQNb3linY9EksWAvJhPyQ"><img src="{% static 'images/youtube.svg' %}" alt="" class="youtube-logo"></a></li>

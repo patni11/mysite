@@ -72,13 +72,6 @@ section.info .courses-div {
       justify-content: space-around;
 }
 
-section.info .courses-div .left-col,
-section.info .courses-div .right-col {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 0px;
-          flex: 1 1 0;
-}
-
 section.info .courses-div .course {
   margin: auto;
   display: block;
@@ -90,24 +83,39 @@ section.info .courses-div .course {
   max-width: 600px;
 }
 
-section.info .courses-div .course img {
+section.info .courses-div .course .course-img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   aspect-ratio: 16 / 9;
 }
 
-section.info .courses-div .course h6 {
+section.info .courses-div .course .course-title {
   color: #FFFFFF;
+  text-align: left;
 }
 
-section.info .courses-div .course .p {
+section.info .courses-div .course .tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0.6em 0 !important;
+}
+
+section.info .courses-div .course .tags .cost {
   padding: 0.2em 1em;
-  margin: 0 0.5em;
+  margin: 0;
   border-radius: 0.5em;
   color: #FFFFFF;
   font-size: 0.8em;
   font-weight: bold;
+}
+
+section.info .courses-div .course .tags::after {
+  display: none !important;
 }
 
 section.info h6.coming-soon {
@@ -118,7 +126,7 @@ section.info h6.coming-soon {
   margin-bottom: -1.2em;
 }
 
-.free {
+.Free {
   background-color: #01937C;
 }
 /*# sourceMappingURL=courses.css.map */

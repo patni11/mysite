@@ -169,76 +169,6 @@ section.articles h2 {
 section.articles .articles-div {
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  justify-content: space-around;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  /*
-        .right-col {
-            display: none;
-        }*/
-}
-
-section.articles .articles-div .left-col,
-section.articles .articles-div .right-col {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 0px;
-          flex: 1 1 0;
-}
-
-section.articles .articles-div .article {
-  margin: 2em;
-  display: inline-block;
-  width: 80%;
-  height: auto;
-  padding: 0.6em 0.6em 0;
-  background-color: rgba(221, 221, 221, 0.2);
-  border-radius: 0.3em;
-  max-width: 600px;
-  aspect-ratio: 16 / 9;
-}
-
-section.articles .articles-div .article img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  aspect-ratio: 16 / 9;
-}
-
-section.articles .articles-div .article h4 {
-  color: #FFFFFF;
-  font-size: 1.1em;
-  text-align: left;
-  margin: 0.3em;
-}
-
-section.articles .articles-div .article ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0.6em 0;
-}
-
-section.articles .articles-div .article ul li {
-  padding: 0.2em 1em;
-  margin: 0 0.5em;
-  border-radius: 0.5em;
-  color: #FFFFFF;
-  font-size: 0.8em;
-  font-weight: bold;
-}
-
-section.articles .articles-div .article p {
-  color: #DDDDDD;
-  font-size: 0.8em;
-  text-align: left;
-  margin-left: 0.4em;
-}
-
-section.articles .articles-div .article:hover {
-  width: 82%;
-  -webkit-box-shadow: 2em 2em 60% #000000;
-          box-shadow: 2em 2em 60% #000000;
 }
 
 .Tech {
@@ -273,11 +203,7 @@ section.newsletter p {
   text-align: center;
 }
 
-section.newsletter input {
-  color: #2B2E4A;
-}
-
-section.newsletter .submit-button {
+section.newsletter .form .button {
   display: inline-block;
   width: 100%;
   border: none;
@@ -288,6 +214,16 @@ section.newsletter .submit-button {
   font-weight: bold;
   font-size: 1.2em;
   border-radius: 6em;
+  cursor: pointer;
+}
+
+section.newsletter .form .revue-form-footer {
+  font-size: 0.8em;
+  color: #3C4169;
+}
+
+section.newsletter .form .revue-form-footer a {
+  color: #1A1C2F;
 }
 
 section.newsletter .footer {
@@ -297,7 +233,7 @@ section.newsletter .footer {
 }
 
 section.newsletter .footer h4 {
-  font-size: 1.6em;
+  font-size: 1.2em;
   text-align: center;
   color: #FFFFFF;
 }
@@ -314,7 +250,9 @@ section.newsletter .footer ul {
 }
 
 section.newsletter .footer ul img {
-  width: 2.5em;
+  width: 1.6em;
+  -webkit-filter: invert(1) hue-rotate(90deg);
+          filter: invert(1) hue-rotate(90deg);
 }
 
 section.newsletter .footer ul .youtube-logo {
@@ -428,6 +366,12 @@ section.newsletter .footer ul .youtube-logo {
     display: -ms-flexbox;
     display: flex;
   }
+  section.articles .articles-div .left-col,
+  section.articles .articles-div .right-col {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+  }
   section.articles .articles-div .left-col {
     display: inline-block;
     margin-right: 1em;
@@ -437,6 +381,7 @@ section.newsletter .footer ul .youtube-logo {
     margin-left: 1em;
   }
   section.articles .articles-div .article {
+    display: inline-block;
     width: 100%;
   }
   section.articles .articles-div .article:hover {

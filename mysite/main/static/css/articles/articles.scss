@@ -101,63 +101,7 @@ section.info {
 
     .articles-div {
         justify-content: space-around;
-        display: flex;
-        .left-col,
-        .right-col,
-        .mid-col {
-            flex: 1 1 0
-        }
-        .article {
-            margin: 2em;
-            display: inline-block;
-            width: 80%;
-            height: auto;
-            padding: 0.6em 0.6em 0;
-            background-color: rgba($secondary-dark, 0.2);
-            border-radius: 0.3em;
-            max-width: 600px;
-            aspect-ratio: 16 / 9;
-            img {
-                width: 100%;
-                object-fit: cover;
-                aspect-ratio: 16 / 9;
-            }
-            h4 {
-                color: $secondary-light;
-                font-size: 1.1em;
-                text-align: left;
-                margin: 0.3em;
-            }
-            ul {
-                display: flex;
-                margin: 0.6em 0;
-                li {
-                    padding: 0.2em 1em;
-                    margin: 0 0.5em;
-                    border-radius: 0.5em;
-                    color: $secondary-light;
-                    font-size: 0.8em;
-                    font-weight: bold;
-                }
-                &::after {
-                    display: none;
-                }
-            }
-            p {
-                color: $secondary-dark;
-                font-size: 0.8em;
-                text-align: left;
-                margin-left: 0.4em;
-            }
-            &:hover {
-                width: 82%;
-                box-shadow: 2em 2em 60% #000000;
-            }
-
-        }
-
     }
-
 }
 
 .Tech {
@@ -179,7 +123,14 @@ section.info {
             margin-bottom: 0;
         }
         .articles-div {
+
             display: flex;
+            .left-col,
+            .right-col,
+            .mid-col {
+                flex: 1 1 0
+            }
+
             .left-col {
                 display: inline-block;
                 margin-right: 1em;
@@ -190,6 +141,7 @@ section.info {
             }
             .article {
                 width: 100%;
+                display: inline-block;
                 &:hover {
                     width: 102%;
                     box-shadow: 2em 2em 60% #000000;

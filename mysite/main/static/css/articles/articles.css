@@ -98,76 +98,6 @@ section.info ul::after {
 section.info .articles-div {
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-section.info .articles-div .left-col,
-section.info .articles-div .right-col,
-section.info .articles-div .mid-col {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 0px;
-          flex: 1 1 0;
-}
-
-section.info .articles-div .article {
-  margin: 2em;
-  display: inline-block;
-  width: 80%;
-  height: auto;
-  padding: 0.6em 0.6em 0;
-  background-color: rgba(221, 221, 221, 0.2);
-  border-radius: 0.3em;
-  max-width: 600px;
-  aspect-ratio: 16 / 9;
-}
-
-section.info .articles-div .article img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  aspect-ratio: 16 / 9;
-}
-
-section.info .articles-div .article h4 {
-  color: #FFFFFF;
-  font-size: 1.1em;
-  text-align: left;
-  margin: 0.3em;
-}
-
-section.info .articles-div .article ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0.6em 0;
-}
-
-section.info .articles-div .article ul li {
-  padding: 0.2em 1em;
-  margin: 0 0.5em;
-  border-radius: 0.5em;
-  color: #FFFFFF;
-  font-size: 0.8em;
-  font-weight: bold;
-}
-
-section.info .articles-div .article ul::after {
-  display: none;
-}
-
-section.info .articles-div .article p {
-  color: #DDDDDD;
-  font-size: 0.8em;
-  text-align: left;
-  margin-left: 0.4em;
-}
-
-section.info .articles-div .article:hover {
-  width: 82%;
-  -webkit-box-shadow: 2em 2em 60% #000000;
-          box-shadow: 2em 2em 60% #000000;
 }
 
 .Tech {
@@ -195,6 +125,13 @@ section.info .articles-div .article:hover {
     display: -ms-flexbox;
     display: flex;
   }
+  section.info .articles-div .left-col,
+  section.info .articles-div .right-col,
+  section.info .articles-div .mid-col {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+  }
   section.info .articles-div .left-col {
     display: inline-block;
     margin-right: 1em;
@@ -205,6 +142,7 @@ section.info .articles-div .article:hover {
   }
   section.info .articles-div .article {
     width: 100%;
+    display: inline-block;
   }
   section.info .articles-div .article:hover {
     width: 102%;

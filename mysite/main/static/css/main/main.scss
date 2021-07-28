@@ -159,61 +159,6 @@ section.articles {
     }
     .articles-div {
         justify-content: space-around;
-        justify-content: space-around;
-        display: flex;
-        .left-col,
-        .right-col {
-            flex: 1 1 0
-        }
-        .article {
-            margin: 2em;
-            display: inline-block;
-            width: 80%;
-            height: auto;
-            padding: 0.6em 0.6em 0;
-            background-color: rgba($secondary-dark, 0.2);
-            border-radius: 0.3em;
-            max-width: 600px;
-            aspect-ratio: 16 / 9;
-            img {
-                width: 100%;
-                object-fit: cover;
-                aspect-ratio: 16 / 9;
-            }
-            h4 {
-                color: $secondary-light;
-                font-size: 1.1em;
-                text-align: left;
-                margin: 0.3em;
-            }
-            ul {
-                display: flex;
-                margin: 0.6em 0;
-                li {
-                    padding: 0.2em 1em;
-                    margin: 0 0.5em;
-                    border-radius: 0.5em;
-                    color: $secondary-light;
-                    font-size: 0.8em;
-                    font-weight: bold;
-                }
-            }
-            p {
-                color: $secondary-dark;
-                font-size: 0.8em;
-                text-align: left;
-                margin-left: 0.4em;
-            }
-            &:hover {
-                width: 82%;
-                box-shadow: 2em 2em 60% #000000;
-            }
-        };
-        /*
-        .right-col {
-            display: none;
-        }*/
-
     }
 }
 .Tech {
@@ -241,21 +186,28 @@ section.newsletter {
         color: $primary-light;
         text-align: center;
     }
-    input {
-        color: $primary;
+    .form {
 
-    }
-    .submit-button {
-        display: inline-block;
-        width: 100%;
-        border: none;
-        outline: none;
-        padding: 0.8em 0;
-        background-color: $primary-light;
-        color: $secondary-dark;
-        font-weight: bold;
-        font-size: 1.2em;
-        border-radius: 6em;
+        .button {
+            display: inline-block;
+            width: 100%;
+            border: none;
+            outline: none;
+            padding: 0.8em 0;
+            background-color: $primary-light;
+            color: $secondary-dark;
+            font-weight: bold;
+            font-size: 1.2em;
+            border-radius: 6em;
+            cursor: pointer;
+        }
+        .revue-form-footer {
+            font-size: 0.8em;
+            color: $primary-light;
+            a {
+                color: $primary-dark;
+            }
+        }
     }
 
     .footer {
@@ -263,7 +215,7 @@ section.newsletter {
         background-color: $primary;
         padding: 0.2em;
         h4 {
-            font-size: 1.6em;
+            font-size: 1.2em;
             text-align: center;
             color: $secondary-light;
         }
@@ -276,7 +228,8 @@ section.newsletter {
             margin-bottom: 0.8em;
             // justify-content: unset;
             img {
-                width: 2.5em;
+                width: 1.6em;
+                filter: invert(1) hue-rotate(90deg);
             }
             .youtube-logo {
                 position: relative;
@@ -372,6 +325,12 @@ section.newsletter {
         }
         .articles-div {
             display: flex;
+
+            .left-col,
+            .right-col {
+                flex: 1 1 0
+            }
+
             .left-col {
                 display: inline-block;
                 margin-right: 1em;
@@ -381,6 +340,7 @@ section.newsletter {
                 margin-left: 1em;
             }
             .article {
+                display: inline-block;
                 width: 100%;
                 &:hover {
                     width: 102%;

@@ -1,9 +1,9 @@
-from main.models import Articles, Courses, Product
+from main.models import Articles, Courses, Product, About
 from django.shortcuts import render
-from .medium_scraper import add_new_article
 from django.views.generic import ListView
 from .articles import left_middle_right
 from .courses import left_right
+
 # Create your views here.
 
 
@@ -76,5 +76,6 @@ def projects(request):
     return render(request, template_name="main/projects.html")
 
 
-def about(request):
-    return render(request, template_name="main/about.html")
+class AboutPage(ListView):
+    model = About
+    template_name = "main/about.html"

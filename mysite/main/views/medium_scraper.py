@@ -6,7 +6,7 @@ import os
 import pandas as pd
 import calendar
 from django.conf import settings
-from .articles import add_article_to_database, image_name
+from .articles import add_article_to_database
 
 
 def download_image(image_url, filename):

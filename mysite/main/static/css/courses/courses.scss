@@ -70,10 +70,6 @@ section.info {
     .courses-div {
         display: flex;
         justify-content: space-around;
-        .left-col,
-        .right-col {
-            flex: 1 1 0
-        }
         .course {
             margin: auto;
             display: block;
@@ -84,22 +80,32 @@ section.info {
             border-radius: 0.3em;
             max-width: 600px;
 
-            img {
+            .course-img {
                 width: 100%;
                 object-fit: cover;
                 aspect-ratio: 16 / 9;
             }
-            h6 {
+            .course-title {
                 color: $secondary-light;
+                text-align: left;
             }
-            .p {
-                padding: 0.2em 1em;
-                margin: 0 0.5em;
-                border-radius: 0.5em;
-                color: $secondary-light;
-                font-size: 0.8em;
-                font-weight: bold;
+            .tags {
+                display: flex;
+                justify-content: space-between;
+                margin: 0.6em 0 !important;
+                .cost {
+                    padding: 0.2em 1em;
+                    margin: 0;
+                    border-radius: 0.5em;
+                    color: $secondary-light;
+                    font-size: 0.8em;
+                    font-weight: bold;
+                }
+                &::after {
+                    display: none !important;
+                }
             }
+
         }
     }
     h6.coming-soon {
@@ -110,6 +116,6 @@ section.info {
         margin-bottom: -1.2em;
     }
 }
-.free {
+.Free {
     background-color: $free;
 }

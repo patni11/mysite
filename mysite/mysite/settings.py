@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main.apps.MainConfig'
+    'main.apps.MainConfig',
+    'django_crontab',
 ]
 
 MIDDLEWARE = [
@@ -58,6 +59,17 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+MIDDLEWARE_CLASSES = (
+    'responsive.middleware.ResponsiveMiddleware',
+)
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.core.context_processors.request',
+    'responsive.context_processors.device',
+
+)
+
+
+#CRONTAB_COMMAND_SUFFIX = '2>&1'
 
 ROOT_URLCONF = 'mysite.urls'
 
@@ -131,3 +143,8 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+CRONJOBS = [
+    ('*/1 * * * *', 'cron.add_article',
+     '>> ' + os.path.join(BASE_DIR, 'data.log') + ' 2>&1')
+]
