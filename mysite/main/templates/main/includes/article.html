@@ -1,7 +1,7 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/include/articles.css' %}">
 
-<a href="{{ link }}" target="blank">
+<a href="/article/{{link}}" target="blank">
     <div class="article">
         <img class = "article-img" src="{{ image }}" alt="">
         <h4 class="article-title">{{ title }}</h4>
@@ -13,4 +13,3 @@
     </div>
     </a>
 
-    
