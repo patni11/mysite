@@ -1,7 +1,10 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/include/articles.css' %}">
-
-<a href="/article/{{link}}" target="blank">
+{% if title == "Ultimate Showdown of Machine Learning Algorithms" %}
+<a href="https://towardsdatascience.com/ultimate-showdown-of-machine-learning-algorithms-af68fbb90b06" target="blank">
+{% else %}
+<a href="/articles/{{link}}" target="blank">
+{% endif %}
     <div class="article">
         <img class = "article-img" src="{{ image }}" alt="">
         <h4 class="article-title">{{ title }}</h4>
