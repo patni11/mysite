@@ -1,0 +1,35 @@
+{% extends "main/header.html" %}
+{% load static %}
+{% block content %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/materialize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/resources/resources.css' %}">
+</head>
+
+    <!-- Need to include nav bar and footer-->
+    <section class="resources container">
+        <img src="{% static 'images/resources/resources.png' %}" alt="resources cover image">
+        <h4>RESOURCES</h4>
+        <p> Resources to learn about Programming & Crypto </p>
+    </section>
+
+    <section class="info">
+        <center>
+        <div class="resources container">
+            
+            <div class="left-col">
+                {% for resource in left %}
+                {% include "main/includes/resource.html" with link=resource.product_link image=resource.image.url title=resource.title %}
+                {% endfor %}
+            </div>
+            <div class="right-col">
+                {% for resource in right %}
+                {% include "main/includes/resource.html" with link=resource.product_link image=resource.image.url title=resource.title %}
+                {% endfor %}
+            </div>
+        </div>
+    </center>
+    </section>
+
+{% endblock %}

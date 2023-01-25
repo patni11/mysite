@@ -1,0 +1,54 @@
+{% extends "main/header.html" %}
+{% load static %}
+{% block content %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/materialize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about/about.css' %}">
+</head>
+
+    <!-- Need to include nav bar and footer-->
+    {% for about in object_list %}
+    <section class="about container">
+        <img src="{% static 'images/about/me.png' %}" alt="about cover image">
+        <h4> ABOUT ME</h4>
+        <p> {{ about.header|safe }} </p>
+    </section>
+
+    <section class="info">
+        <div class="container">
+            
+        <div class="Now part">
+            <h4>Now</h4>
+            <h5>What I am Up To</h5>
+            <div class="details">
+                <ul>
+                    {{ about.now|safe }}
+                </ul>
+            </div>
+        </div>
+
+        <div class="Learning part">
+            <h4>Learning</h4>
+            <h5>Things I want to learn</h5>
+            <div class="details">
+                <ul>
+                    {{ about.learning|safe }}
+                </ul>
+            </div>
+        </div>
+
+        <div class="contact part">
+            <h4>Get In Touch</h4>
+            <h5>If you want to hire me, want some advice, or just wanna chat</h5>
+            <div class="details">
+                <ul>
+                    {{ about.get_in_touch|safe }}
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    </section>
+    {% endfor %}
+{% endblock %}

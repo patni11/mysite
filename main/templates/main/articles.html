@@ -1,0 +1,49 @@
+{% extends "main/header.html" %}
+{% load static %}
+{% block content %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/materialize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/articles/articles.css' %}">
+</head>
+
+    <!-- Need to include nav bar and footer-->
+    <section class="articles container">
+        <img src="{% static 'images/articles/writing.png' %}" alt="writing articles">
+        <h4>MY ARTICLES</h4>
+        <p> I started writing to better organize My thoughts, improve my learning, and share what i find useful. Now, I have been 5x top writer on medium with over 100k views. </p>
+    </section>
+
+    <section class="info">
+            <div class="sort-by container">
+                <h4> SORT BY</h4>
+                <ul>
+                    <li><a href="/articles/Tech">Technology</a></li>
+                    <li><a href="/articles/Crypto">Crypto</a></li>
+                    <li><a href="/articles/Programming">Programming</a></li>
+                    <li><a href="/articles/Productivity">Productivity</a></li>
+                </ul>
+            </div>
+            <center>
+                <div class="articles-div container">
+                    <div class="left-col">
+                        {% for article in left %}
+                        {% include "main/includes/article.html" with link=article.medium_link image=article.image.url title=article.title tags=article.tags date=article.date_created %}
+                        {% endfor %}
+                    </div>
+                    <div class="mid-col">
+                        {% for article in middle %}
+                        {% include "main/includes/article.html" with link=article.medium_link image=article.image.url title=article.title tags=article.tags date=article.date_created %}
+                        {% endfor %}
+                    </div>
+                    
+                    <div class="right-col">
+                        {% for article in right %}
+                        {% include "main/includes/article.html" with link=article.medium_link image=article.image.url title=article.title tags=article.tags date=article.date_created %}
+                        {% endfor %}
+                    </div>
+                
+                </div>
+            </center>
+    </section>
+{% endblock %}

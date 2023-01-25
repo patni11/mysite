@@ -1,0 +1,18 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/include/articles.css' %}">
+{% if title == "Ultimate Showdown of Machine Learning Algorithms" %}
+<a href="https://towardsdatascience.com/ultimate-showdown-of-machine-learning-algorithms-af68fbb90b06" target="blank">
+{% else %}
+<a href="https://blog.shubhpatni.com/{{link}}" target="blank">
+{% endif %}
+    <div class="article">
+        <img class = "article-img" src="{{ image }}" alt="article cover image">
+        <h4 class="article-title">{{ title }}</h4>
+        <ul class="tags">
+            <li class="{{ tags }}">{{ tags }}</li>
+            <p class="date">{{ date }}</p>
+        </ul>
+        
+    </div>
+    </a>
+

@@ -1,0 +1,18 @@
+{% extends "main/header.html" %}
+{% load static %}
+{% block content %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/materialize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/projects/projects.css' %}">
+</head>
+
+<body>
+    <!-- Need to include nav bar and footer-->
+    <section class="projects container">
+        <img src="{% static 'images/projects/projects.png' %}" alt="writing code">
+        <h4>MY PROJECTS</h4>
+        <p> WORK IN PROGRESS <span> You can follow me on my socials to stay updated </span></p>
+    </section>
+
+{% endblock %}

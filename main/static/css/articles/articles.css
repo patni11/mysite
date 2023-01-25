@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  background-color: #2B2E4A;
+  font-family: 'poppins';
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+h4 {
+  font-weight: bold;
+  font-family: 'poppins';
+  color: #FFFFFF;
+}
+
+section.articles {
+  background-color: #2B2E4A;
+  padding: 3em 0 !important;
+  text-align: center;
+  margin: 6em auto 3em !important;
+}
+
+section.articles img {
+  display: block;
+  width: 50%;
+  max-width: 400px;
+  height: auto;
+  margin: auto;
+}
+
+section.articles h4 {
+  margin: 1.5em 0 0.8em;
+}
+
+section.articles p {
+  font-size: 1.2em;
+  color: #FFFFFF;
+  font-family: 'poppins';
+}
+
+section.articles p::after {
+  content: ' ';
+  width: 80%;
+  height: 0.3em;
+  background-color: #3C4169;
+  display: block;
+  margin: 1.2em auto auto;
+  border-radius: 5em;
+}
+
+section.info {
+  background-color: #1A1C2F;
+  padding: 3em 0;
+}
+
+section.info h4 {
+  margin-top: 1.4em;
+  text-align: center;
+}
+
+section.info ul {
+  text-align: center;
+}
+
+section.info ul li {
+  display: inline-block;
+  margin: 1em;
+}
+
+section.info ul li a {
+  color: #F2F2F2;
+  opacity: 60%;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+section.info ul li a:hover {
+  font-size: 1.6em;
+  font-weight: bolder;
+}
+
+section.info ul::after {
+  content: ' ';
+  width: 80%;
+  height: 0.3em;
+  background-color: #3C4169;
+  display: block;
+  margin: 1.2em auto auto;
+  border-radius: 5em;
+}
+
+section.info .articles-div {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.Tech {
+  background-color: #3D84B8;
+}
+
+.Crypto {
+  background-color: #FF8303;
+}
+
+.Programming {
+  background-color: #01937C;
+}
+
+.Productivity {
+  background-color: #a8026f;
+}
+
+@media only screen and (min-width: 768px) {
+  section.info h2 {
+    margin-bottom: 0;
+  }
+  section.info .articles-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  section.info .articles-div .left-col,
+  section.info .articles-div .right-col,
+  section.info .articles-div .mid-col {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+  }
+  section.info .articles-div .left-col {
+    display: inline-block;
+    margin-right: 1em;
+  }
+  section.info .articles-div .right-col {
+    display: inline-block;
+    margin-left: 1em;
+  }
+  section.info .articles-div .article {
+    width: 100%;
+    display: inline-block;
+  }
+  section.info .articles-div .article:hover {
+    width: 102%;
+    -webkit-box-shadow: 2em 2em 60% #000000;
+            box-shadow: 2em 2em 60% #000000;
+  }
+}
+/*# sourceMappingURL=articles.css.map */
